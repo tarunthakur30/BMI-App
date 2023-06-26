@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:alpha="10"
+    android:padding="32dp"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/txtHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BMI CALCULATOR"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:layout_marginStart="70dp"
+        android:layout_marginBottom="96dp"
+        android:alpha="10" />
+
+    <TextView
+        android:id="@+id/txtChoose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:alpha="10"
+        android:text="Choose your Gender"
+        android:textStyle="bold|normal"
+        android:textSize="20sp"/>
+    
+    <ImageView
+        android:id="@+id/imgMale"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/man_svgrepo_com"
+        android:layout_below="@id/txtHead"
+        android:alpha="10"
+        android:layout_marginStart="32dp" />
+
+    <TextView
+        android:id="@+id/txtM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:text="MALE"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@id/imgMale"
+        android:layout_marginTop="15dp"
+        android:alpha="10"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/imgFemale"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/female_logo_blur"
+        android:layout_below="@id/txtHead"
+        android:alpha="10"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="32dp"/>
+
+    <TextView
+        android:id="@+id/txtF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="250dp"
+        android:text="FEMALE"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@id/imgFemale"
+        android:layout_marginTop="15dp"
+        android:alpha="10"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/txtWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtM"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="52dp"
+        android:text="Weight(Kg)"
+        android:textColor="@color/black"
+        android:alpha="10"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txtHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtF"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="240dp"
+        android:text="Height(in cm)"
+        android:textColor="@color/black"
+        android:alpha="10"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edWeightValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtWeight"
+        android:layout_marginStart="48dp"
+        android:textColor="@android:color/black"
+        android:hint="00"
+        android:inputType="number"
+        android:maxLength="4"
+        android:alpha="10"
+        android:textSize="48sp" />
+
+    <EditText
+        android:id="@+id/edHeightValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtHeight"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="32dp"
+        android:textColor="@android:color/black"
+        android:hint="00"
+        android:inputType="number"
+        android:alpha="10"
+        android:maxLength="3"
+        android:textSize="48sp" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtChoose"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="320dp"
+        android:text="Calculate BMI"
+        android:textStyle="bold|normal"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/blue"
+        app:cornerRadius="8dp"
+        android:alpha="10"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:id="@+id/llResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edWeightValue"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        android:alpha="10"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Your BMI" />
+
+        <TextView
+            android:id="@+id/txtBMI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            tools:text="10.3"
+            android:text="Your BMI" />
+
+        <TextView
+            android:id="@+id/statusBMI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            tools:text="OverWeight"/>
+        <TextView
+            android:id="@+id/txtAgain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Calculate BMI Again"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/blue"
+            android:textStyle="bold"/>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>

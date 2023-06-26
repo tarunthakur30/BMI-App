@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SplashActivity">
+
+    <TextView
+        android:id="@+id/txtTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BMI CALCULATOR"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="#D70CF6"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        />
+
+    <com.airbnb.lottie.LottieAnimationView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_rawRes="@raw/spraw"
+        app:lottie_autoPlay="true"/>
+
+
+
+</LinearLayout>
